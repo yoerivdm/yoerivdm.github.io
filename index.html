@@ -10,7 +10,7 @@
         <script>
         $(function() {
 	        window.addEventListener("orientationchange", function() {
-	        	$('#log').append('Rotation change ' + window.orientation);
+	        	$('#log').append('Rotation change ' + window.orientation + '<br />');
 	        	// Announce the new orientation number
 	        	var zoomlevel = '0.5';
 	        	if(window.orientation == '90' || window.orientation == '-90') {
@@ -19,6 +19,8 @@
 	        	
 	        	viewport = document.querySelector("meta[name=viewport]");
 	        	viewport.setAttribute('content', 'initial-scale=' + zoomlevel);
+	        	
+	        	$('#log').append('Zoomlevel ' + zoomlevel + '<br />');
 	        }, false);
       	});
         </script>
