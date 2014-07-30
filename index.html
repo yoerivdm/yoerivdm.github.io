@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
-        <meta name="description" content="">
+        <meta id="viewport" name="viewport" content="initial-scale=1">
 
  	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script>
@@ -17,8 +17,7 @@
 	        		zoomlevel = '2.0';
 	        	}
 	        	
-	        	viewport = document.querySelector("meta[name=viewport]");
-	        	viewport.setAttribute('content', 'initial-scale=' + zoomlevel);
+	        	 $("#viewport").attr("content", 'initial-scale=' + zoomlevel);
 	        	
 	        	$('#log').append('Zoomlevel ' + zoomlevel + '<br />');
 	        }, false);
