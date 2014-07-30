@@ -6,21 +6,26 @@
         <title></title>
         <meta name="description" content="">
 
+ 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script>
-        window.addEventListener("orientationchange", function() {
-        	// Announce the new orientation number
-        	var zoomlevel = '0.5';
-        	if(window.orientation == '90' || window.orientation == '-90') {
-        		zoomlevel = '2.0';
-        	}
-        	
-        	viewport = document.querySelector("meta[name=viewport]");
-        	viewport.setAttribute('content', 'initial-scale=' + zoomlevel);
-        }, false);
+        $(function() {
+	        window.addEventListener("orientationchange", function() {
+	        	$('#log').append('Rotation change ' + window.orientation);
+	        	// Announce the new orientation number
+	        	var zoomlevel = '0.5';
+	        	if(window.orientation == '90' || window.orientation == '-90') {
+	        		zoomlevel = '2.0';
+	        	}
+	        	
+	        	viewport = document.querySelector("meta[name=viewport]");
+	        	viewport.setAttribute('content', 'initial-scale=' + zoomlevel);
+	        }, false);
+      	});
         </script>
         
     </head>
     <body>
 		<h1>Rotation &amp; Viewport interaction test</h1>
+		<p id="log"></p>
     </body>
 </html>
