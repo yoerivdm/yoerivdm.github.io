@@ -5,18 +5,17 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title></title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        
+
         <script>
         window.addEventListener("orientationchange", function() {
         	// Announce the new orientation number
         	var zoomlevel = '0.5';
         	if(window.orientation == '90' || window.orientation == '-90') {
-        		zoomlevel = '4.0';
+        		zoomlevel = '2.0';
         	}
         	
         	viewport = document.querySelector("meta[name=viewport]");
-        	viewport.setAttribute('content', 'width=device-width, initial-scale=' + zoomlevel);
+        	viewport.setAttribute('content', 'initial-scale=' + zoomlevel);
         }, false);
         </script>
         
