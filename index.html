@@ -9,6 +9,15 @@
  	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script>
         $(function() {
+		var zoomlevel = '0.5';
+        	if(window.orientation == '90' || window.orientation == '-90') {
+        		zoomlevel = '2.0';
+        	}
+        	
+        	 $("#viewport").attr("content", 'initial-scale=' + zoomlevel);
+
+        	
+        	
 	        window.addEventListener("orientationchange", function() {
 	        	$('#log').append('Rotation change ' + window.orientation + '<br />');
 	        	// Announce the new orientation number
